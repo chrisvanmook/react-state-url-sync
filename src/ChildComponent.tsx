@@ -8,18 +8,14 @@ const ChildComponent = () => {
     <div>
       <button
         onClick={() => {
-          if (state) {
-            setState(state + 1)
-          }
+          setState(state + 1)
         }}
       >
         zoom in
       </button>
       <button
         onClick={() => {
-          if (state) {
-            setState(state - 1, 'replaceState')
-          }
+          setState(state - 1, 'replaceState')
         }}
       >
         zoom out
