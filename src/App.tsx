@@ -1,14 +1,22 @@
 import React from 'react'
-import { URLSyncStateProvider } from './URLSyncStateContext'
-import ChildComponent from './ChildComponent'
+import { BrowserRouter as Router } from 'react-router-dom'
 import ChildComponentTwo from './ChildComponentTwo'
+import ChildComponent from './ChildComponent'
 
 function App() {
   return (
-    <URLSyncStateProvider>
+    <Router>
+      <Count />
+    </Router>
+  )
+}
+
+function Count() {
+  return (
+    <>
       <ChildComponent />
       <ChildComponentTwo />
-    </URLSyncStateProvider>
+    </>
   )
 }
 

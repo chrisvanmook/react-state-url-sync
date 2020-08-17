@@ -1,30 +1,18 @@
 import React from 'react'
-import useParamState from './useParamState'
-import { params } from './URLParam'
+import useParam from './useParam'
+import { countParam } from './params'
 
 const ChildComponentTwo = () => {
-  const [state, setState] = useParamState<number>(params.zoomParam)
+  const [count, setCount] = useParam(countParam)
   return (
     <div>
-      <button
-        onClick={() => {
-          if (state) {
-            setState(state + 1)
-          }
-        }}
-      >
-        zoom in
+      <p>The count is: {count}</p>
+      <button type="button" onClick={() => setCount(count + 1)}>
+        Increase count
       </button>
-      <button
-        onClick={() => {
-          if (state) {
-            setState(state - 1, 'replaceState')
-          }
-        }}
-      >
-        zoom out
+      <button type="button" onClick={() => setCount(count - 1)}>
+        Decrease count
       </button>
-      <h1>{state}</h1>
     </div>
   )
 }
