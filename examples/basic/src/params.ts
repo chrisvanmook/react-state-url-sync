@@ -1,4 +1,4 @@
-import { UrlParam } from './useParam'
+import { UrlParam } from 'react-router-query-sync/lib/useParam'
 
 export const countParam: UrlParam<number> = {
   name: 'count',
