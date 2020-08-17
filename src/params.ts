@@ -1,9 +1,4 @@
-export interface UrlParam<T> {
-  name: string
-  defaultValue: T
-  encode: (value: T) => string
-  decode: (value: string) => T
-}
+import { UrlParam } from './useParam'
 
 export const countParam: UrlParam<number> = {
   name: 'count',

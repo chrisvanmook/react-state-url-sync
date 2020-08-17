@@ -1,7 +1,7 @@
-import React from 'react';
-import { BrowserRouter as Router } from "react-router-dom";
-import { countParam } from './params';
-import useParam from './useParam';
+import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
+import ChildComponentTwo from './ChildComponentTwo'
+import ChildComponent from './ChildComponent'
 
 function App() {
   return (
@@ -12,13 +12,10 @@ function App() {
 }
 
 function Count() {
-  const [count, setCount] = useParam(countParam)
-
   return (
     <>
-      <p>The count is: {count}</p>
-      <button type="button" onClick={() => setCount(count + 1)}>Increase count</button>
-      <button type="button" onClick={() => setCount(count - 1)}>Decrease count</button>
+      <ChildComponent />
+      <ChildComponentTwo />
     </>
   )
 }
