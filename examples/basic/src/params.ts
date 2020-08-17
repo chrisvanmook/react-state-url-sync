@@ -6,3 +6,13 @@ export const countParam: UrlParam<number> = {
   encode: (value) => value.toString(),
   decode: (value) => parseInt(value, 10),
 }
+
+export const complexParam: UrlParam<[[number, number], [number, number]]> = {
+  name: 'complex',
+  defaultValue: [
+    [1, 1],
+    [2, 2],
+  ],
+  encode: (value) => JSON.stringify(value),
+  decode: (value) => JSON.parse(value),
+}
