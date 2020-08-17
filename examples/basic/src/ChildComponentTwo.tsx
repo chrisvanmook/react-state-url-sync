@@ -1,8 +1,8 @@
 import React from 'react'
-import useParam from './useParam'
+import { useParam } from 'react-router-query-sync'
 import { countParam } from './params'
 
-const ChildComponent = () => {
+const ChildComponentTwo = () => {
   const [count, setCount] = useParam(countParam)
   return (
     <div>
@@ -17,4 +17,4 @@ const ChildComponent = () => {
   )
 }
 
-export default ChildComponent
+export default ChildComponentTwo

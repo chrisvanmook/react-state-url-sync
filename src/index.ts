@@ -1,1 +1,3 @@
-export { default as useParam } from './useParam'
+import useParam from './useParam'
+
+export { useParam }
